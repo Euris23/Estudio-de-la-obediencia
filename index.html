@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Obediencia A Pesar De... — Estudio Bíblico Expositivo</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Contenedor del reproductor de audio de fondo (opcional/interactivo) -->
+    <div class="presentation-container" id="presentation">
+        
+        <!-- Barra de Progreso Superior -->
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Indicador de Slide Actual (Flotante) -->
+        <div class="slide-counter" id="slideCounter">
+            <span class="current">01</span><span class="separator">/</span><span class="total">19</span>
+        </div>
+
+        <!-- slides -->
+        
+        <!-- SLIDE 1: Portada -->
+        <section class="slide active" id="slide-1" data-theme="dark">
+            <div class="slide-content cover-layout">
+                <div class="cover-image-container">
+                    <img src="assets/images/cover.png" alt="Biblical Presentation Cover" class="slide-img cover-bg">
+                </div>
+                <div class="cover-text-content">
+                    <h2 class="pre-title">ESTUDIO BÍBLICO</h2>
+                    <h1 class="main-title">LA OBEDIENCIA<br><span class="accent-gold">A PESAR DE...</span></h1>
+                    <div class="divider-gold"></div>
+                    <p class="cover-description">Un recorrido por las Escrituras a través de la vida de hombres y mujeres que decidieron confiar y obedecer a Dios en medio de la prueba.</p>
+                    <button class="btn-start" onclick="nextSlide()">
+                        <span>COMENZAR ESTUDIO</span>
+                        <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: Transición 1 - Miedo -->
+        <section class="slide transition-slide" id="slide-2" data-theme="dark">
+            <div class="slide-content transition-layout">
+                <div class="transition-card">
+                    <span class="section-number">SECCIÓN I</span>
+                    <h2 class="transition-title">Obedecer a pesar del miedo</h2>
+                    <div class="divider-gold-spark"></div>
+                    <p class="doctrinal-phrase">“Aunque sintamos temor, la voz de Dios siempre nos da la valentía para seguir adelante.”</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: Moisés (Miedo 1) -->
+        <section class="slide story-slide" id="slide-3" data-theme="dark">
+            <div class="slide-content story-layout">
+                <div class="story-left">
+                    <span class="story-category">OBEDECER A PESAR DEL MIEDO</span>
+                    <h2 class="story-character">MOISÉS</h2>
+                    <div class="scripture-box">
+                        <p class="scripture-text">“Ve, por tanto, ahora, y te enviaré a Faraón, para que saques de Egipto a mi pueblo.”</p>
+                        <span class="scripture-reference">Éxodo 3:10</span>
+                    </div>
+                    <div class="doctrinal-summary">
+                        <h3>EL LLAMADO EN EL DESIERTO</h3>
+                        <p>Cuando Dios llamó a Moisés desde la zarza ardiente para liberar a su pueblo, Moisés sintió temor y puso muchas excusas por su falta de capacidad. A pesar de sus dudas, decidió obedecer la voz de Dios y aceptar la misión.</p>
+                    </div>
+                </div>
+                <div class="story-right">
+                    <!-- Vector Art premium de zarza ardiente dorada como fallback -->
+                    <div class="image-wrapper vector-fallback bg-moises">
+                        <div class="svg-vector-container">
+                            <svg viewBox="0 0 100 100" class="gold-vector-svg">
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="url(#goldGradient)" stroke-width="1.5" stroke-dasharray="2,2"/>
+                                <!-- Tronco/Ramas de la Zarza -->
+                                <path d="M50 78 Q50 55, 38 48 Q32 42, 28 45" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+                                <path d="M50 78 Q51 58, 62 50 Q72 42, 75 48" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+                                <path d="M50 68 Q45 52, 48 40" fill="none" stroke="url(#goldGradient)" stroke-width="1.5"/>
+                                <path d="M50 60 Q55 48, 52 35" fill="none" stroke="url(#goldGradient)" stroke-width="1.5"/>
+                                <!-- Partículas de Fuego Subiendo (Animadas) -->
+                                <g class="flame-group">
+                                    <!-- Llama 1 (Centro baja) -->
+                                    <path class="flame-particle" d="M50 45 Q46 55, 50 65 Q54 55, 50 45 Z" fill="url(#goldGradient)" opacity="0.8"/>
+                                    <!-- Llama 2 (Izquierda) -->
+                                    <path class="flame-particle" d="M38 42 Q33 50, 38 60 Q43 50, 38 42 Z" fill="url(#goldGradient)" opacity="0.8"/>
+                                    <!-- Llama 3 (Derecha) -->
+                                    <path class="flame-particle" d="M62 45 Q57 53, 62 63 Q67 53, 62 45 Z" fill="url(#goldGradient)" opacity="0.8"/>
+                                    <!-- Llama 4 (Centro alta) -->
+                                    <path class="flame-particle" d="M50 32 Q47 40, 50 50 Q53 40, 50 32 Z" fill="url(#goldGradient)" opacity="0.8"/>
+                                    <!-- Llama 5 (Superior) -->
+                                    <path class="flame-particle" d="M48 25 Q45 32, 48 40 Q51 32, 48 25 Z" fill="url(#goldGradient)" opacity="0.8"/>
+                                </g>
+                                <!-- Destellos dorados (Animados) -->
+                                <circle class="sparkle" cx="50" cy="22" r="1.5" fill="var(--gold-light)"/>
+                                <circle class="sparkle" cx="32" cy="38" r="1" fill="var(--gold-light)"/>
+                                <circle class="sparkle" cx="68" cy="40" r="1" fill="var(--gold-light)"/>
+                                <circle class="sparkle" cx="45" cy="50" r="1.2" fill="var(--gold-light)"/>
+                                <circle class="sparkle" cx="55" cy="48" r="1.2" fill="var(--gold-light)"/>
+                            </svg>
+                        </div>
+                        <div class="img-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: Gedeón (Miedo 2) -->
+        <section class="slide story-slide" id="slide-4" data-theme="dark">
+            <div class="slide-content story-layout">
+                <div class="story-left">
+                    <span class="story-category">OBEDECER A PESAR DEL MIEDO</span>
+                    <h2 class="story-character">GEDEÓN</h2>
+                    <div class="scripture-box">
+                        <p class="scripture-text">“Ve con esta tu fuerza, y salvarás a Israel de la mano de los madianitas.”</p>
+                        <span class="scripture-reference">Jueces 6:14</span>
+                    </div>
+                    <div class="doctrinal-summary">
+                        <h3>LA VICTORIA EN LA DEBILIDAD</h3>
+                        <p>Gedeón tuvo que enfrentar a un gran ejército enemigo con solo 300 hombres armados con antorchas y cántaros. A pesar de la gran desventaja, obedeció las instrucciones de Dios y obtuvo la victoria.</p>
+                    </div>
+                </div>
+                <div class="story-right">
+                    <div class="image-wrapper">
+                        <img src="assets/images/gedeon.png" alt="Gedeón sosteniendo una antorcha" class="slide-img">
+                        <div class="img-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: Transición 2 - No entender -->
+        <section class="slide transition-slide" id="slide-5" data-theme="dark">
+            <div class="slide-content transition-layout">
+                <div class="transition-card">
+                    <span class="section-number">SECCIÓN II</span>
+                    <h2 class="transition-title">Obedecer a pesar de no entender</h2>
+                    <div class="divider-gold-spark"></div>
+                    <p class="doctrinal-phrase">“La fe consiste en confiar en Dios y hacer su voluntad, incluso cuando no entendemos sus planes.”</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 6: Abraham -->
+        <section class="slide story-slide" id="slide-6" data-theme="dark">
+            <div class="slide-content story-layout">
+                <div class="story-left">
+                    <span class="story-category">OBEDECER A PESAR DE NO ENTENDER</span>
+                    <h2 class="story-character">ABRAHAM</h2>
+                    <div class="scripture-box">
+                        <p class="scripture-text">“Y salió sin saber a dónde iba.”</p>
+                        <span class="scripture-reference">Hebreos 11:8</span>
+                    </div>
+                    <div class="doctrinal-summary">
+                        <h3>CAMINAR HACIA LO DESCONOCIDO</h3>
+                        <p>Dios le pidió a Abraham que dejara su tierra y a su familia para ir a un lugar que no conocía. Él obedeció y salió sin dudar, confiando plenamente en la promesa del Señor.</p>
+                    </div>
+                </div>
+                <div class="story-right">
+                    <div class="image-wrapper">
+                        <img src="assets/images/abraham.png" alt="Abraham mirando al cielo estrellado" class="slide-img">
+                        <div class="img-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 7: Transición 3 - Dolor -->
+        <section class="slide transition-slide" id="slide-7" data-theme="dark">
+            <div class="slide-content transition-layout">
+                <div class="transition-card">
+                    <span class="section-number">SECCIÓN III</span>
+                    <h2 class="transition-title">Obedecer a pesar del dolor</h2>
+                    <div class="divider-gold-spark"></div>
+                    <p class="doctrinal-phrase">“Incluso en medio de nuestras lágrimas y sufrimientos, obedecer a Dios es nuestra mayor muestra de amor.”</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 8: Job -->
+        <section class="slide story-slide" id="slide-8" data-theme="dark">
+            <div class="slide-content story-layout">
+                <div class="story-left">
+                    <span class="story-category">OBEDECER A PESAR DEL DOLOR</span>
+                    <h2 class="story-character">JOB</h2>
+                    <div class="scripture-box">
+                        <p class="scripture-text">“Jehová dio, y Jehová quitó; sea el nombre de Jehová bendito.”</p>
+                        <span class="scripture-reference">Job 1:21</span>
+                    </div>
+                    <div class="doctrinal-summary">
+                        <h3>ADORACIÓN EN LA PRUEBA</h3>
+                        <p>A pesar de perder a sus hijos, sus posesiones y su salud, Job se mantuvo fiel a Dios. En medio de su inmenso dolor, decidió adorar al Señor en lugar de quejarse o rebelarse.</p>
+                    </div>
+                </div>
+                <div class="story-right">
+                    <div class="image-wrapper">
+                        <img src="assets/images/job.png" alt="Job arrodillado en las cenizas" class="slide-img">
+                        <div class="img-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 9: Transición 4 - Presión -->
+        <section class="slide transition-slide" id="slide-9" data-theme="dark">
+            <div class="slide-content transition-layout">
+                <div class="transition-card">
+                    <span class="section-number">SECCIÓN IV</span>
+                    <h2 class="transition-title">Obedecer a pesar de la presión</h2>
+                    <div class="divider-gold-spark"></div>
+                    <p class="doctrinal-phrase">“Cuando las personas y las circunstancias nos presionan, es mejor obedecer a Dios antes que a los hombres.”</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 10: Daniel -->
+        <section class="slide story-slide" id="slide-10" data-theme="dark">
+            <div class="slide-content story-layout">
+                <div class="story-left">
+                    <span class="story-category">OBEDECER A PESAR DE LA PRESIÓN</span>
+                    <h2 class="story-character">DANIEL</h2>
+                    <div class="scripture-box">
+                        <p class="scripture-text">“Mi Dios envió su ángel, el cual cerró la boca de los leones.”</p>
+                        <span class="scripture-reference">Daniel 6:22</span>
+                    </div>
+                    <div class="doctrinal-summary">
+                        <h3>FIDELIDAD ANTE LAS LEYES HUMANAS</h3>
+                        <p>Cuando el rey prohibió orar a Dios bajo pena de ser arrojado a los leones, Daniel continuó orando a Dios en su ventana como siempre. Decidió mantenerse fiel a pesar de poner su vida en peligro.</p>
+                    </div>
+                </div>
+                <div class="story-right">
+                    <div class="image-wrapper">
+                        <img src="assets/images/daniel.png" alt="Daniel en el foso de los leones" class="slide-img">
+                        <div class="img-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 11: Transición 5 - Frustración -->
+        <section class="slide transition-slide" id="slide-11" data-theme="dark">
+            <div class="slide-content transition-layout">
+                <div class="transition-card">
+                    <span class="section-number">SECCIÓN V</span>
+                    <h2 class="transition-title">Obedecer a pesar de la frustración</h2>
+                    <div class="divider-gold-spark"></div>
+                    <p class="doctrinal-phrase">“A pesar del cansancio o de no ver resultados, la palabra de Dios es suficiente para volver a intentarlo.”</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 12: Pedro -->
+        <section class="slide story-slide" id="slide-12" data-theme="dark">
+            <div class="slide-content story-layout">
+                <div class="story-left">
+                    <span class="story-category">OBEDECER A PESAR DE LA FRUSTRACIÓN</span>
+                    <h2 class="story-character">PEDRO</h2>
+                    <div class="scripture-box">
+                        <p class="scripture-text">“Mas en tu palabra echaré la red.”</p>
+                        <span class="scripture-reference">Lucas 5:5</span>
+                    </div>
+                    <div class="doctrinal-summary">
+                        <h3>CREER A PESAR DE LA EXPERIENCIA</h3>
+                        <p>Pedro y sus compañeros habían trabajado toda la noche sin pescar nada. Aunque estaba cansado y desanimado, confió en las palabras de Jesús y volvió a lanzar las redes, logrando una pesca milagrosa.</p>
+                    </div>
+                </div>
+                <div class="story-right">
+                    <!-- Vector Art premium de barco pesquero dorado en tormenta como fallback -->
+                    <div class="image-wrapper vector-fallback bg-peter">
+                        <div class="svg-vector-container">
+                            <svg viewBox="0 0 100 100" class="gold-vector-svg">
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="url(#goldGradient)" stroke-width="1.5" stroke-dasharray="2,2"/>
+                                <!-- Barco -->
+                                <path d="M25 60 L75 60 L68 72 L32 72 Z" fill="none" stroke="url(#goldGradient)" stroke-width="2" stroke-linejoin="round"/>
+                                <!-- Mástil -->
+                                <line x1="50" y1="25" x2="50" y2="60" stroke="url(#goldGradient)" stroke-width="2"/>
+                                <!-- Velas -->
+                                <path d="M50 28 L35 48 L50 48 Z" fill="none" stroke="url(#goldGradient)" stroke-width="1.5"/>
+                                <path d="M52 28 L63 45 L52 45 Z" fill="none" stroke="url(#goldGradient)" stroke-width="1.5"/>
+                                <!-- Ondas del mar -->
+                                <path d="M15 65 Q 25 60, 35 65 T 55 65 T 75 65 T 85 65" fill="none" stroke="url(#goldGradient)" stroke-width="1.5"/>
+                                <path d="M10 70 Q 25 74, 40 70 T 70 70 T 90 70" fill="none" stroke="url(#goldGradient)" stroke-width="1"/>
+                                <!-- Red -->
+                                <path d="M52 48 Q 65 52, 72 65" fill="none" stroke="url(#goldGradient)" stroke-width="1" stroke-dasharray="1,1"/>
+                            </svg>
+                        </div>
+                        <div class="img-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 13: Transición 6 - Rechazo -->
+        <section class="slide transition-slide" id="slide-13" data-theme="dark">
+            <div class="slide-content transition-layout">
+                <div class="transition-card">
+                    <span class="section-number">SECCIÓN VI</span>
+                    <h2 class="transition-title">Obedecer a pesar del rechazo</h2>
+                    <div class="divider-gold-spark"></div>
+                    <p class="doctrinal-phrase">“Cumplir con lo que Dios nos pide vale la pena, aun si los demás nos dan la espalda.”</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 14: Jeremías -->
+        <section class="slide story-slide" id="slide-14" data-theme="dark">
+            <div class="slide-content story-layout">
+                <div class="story-left">
+                    <span class="story-category">OBEDECER A PESAR DEL RECHAZO</span>
+                    <h2 class="story-character">JEREMÍAS</h2>
+                    <div class="scripture-box">
+                        <p class="scripture-text">“Pero el Señor está conmigo como un guerrero poderoso.”</p>
+                        <span class="scripture-reference">Jeremías 20:11</span>
+                    </div>
+                    <div class="doctrinal-summary">
+                        <h3>PERSEVERAR ANTE EL RECHAZO</h3>
+                        <p>Jeremías predicó el mensaje de Dios durante años a un pueblo que se burlaba de él, lo rechazaba y lo maltrataba. A pesar de sentirse solo y desanimado, nunca dejó de anunciar la palabra del Señor.</p>
+                    </div>
+                </div>
+                <div class="story-right">
+                    <!-- Vector Art premium de ruinas de Jerusalén doradas como fallback -->
+                    <div class="image-wrapper vector-fallback bg-jeremias">
+                        <div class="svg-vector-container">
+                            <svg viewBox="0 0 100 100" class="gold-vector-svg">
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="url(#goldGradient)" stroke-width="1.5" stroke-dasharray="2,2"/>
+                                <!-- Pilares rotos de templo -->
+                                <path d="M20 75 L30 75 L30 45 L20 45 Z" fill="none" stroke="url(#goldGradient)" stroke-width="1.5"/>
+                                <path d="M22 45 L28 45 L25 40 Z" fill="none" stroke="url(#goldGradient)" stroke-width="1.5"/>
+                                <path d="M35 75 L45 75 L45 35 L35 35 Z" fill="none" stroke="url(#goldGradient)" stroke-width="1.5"/>
+                                <!-- Columna rota -->
+                                <path d="M65 75 L75 75 L75 55 L65 55 Z" fill="none" stroke="url(#goldGradient)" stroke-width="1.5"/>
+                                <path d="M72 50 L82 50 L77 55 Z" fill="none" stroke="url(#goldGradient)" stroke-width="1.5" transform="rotate(15 77 55)"/>
+                                <!-- Muro derrumbado -->
+                                <path d="M15 75 L85 75 L80 72 L70 73 L60 70 L50 72 L35 70 L25 73 Z" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+                                <!-- Lágrima/Llama -->
+                                <path d="M50 30 Q45 42, 50 48 Q55 42, 50 30 Z" fill="none" stroke="url(#goldGradient)" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <div class="img-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 15: Transición 7 - Espera -->
+        <section class="slide transition-slide" id="slide-15" data-theme="dark">
+            <div class="slide-content transition-layout">
+                <div class="transition-card">
+                    <span class="section-number">SECCIÓN VII</span>
+                    <h2 class="transition-title">Obedecer a pesar de la espera</h2>
+                    <div class="divider-gold-spark"></div>
+                    <p class="doctrinal-phrase">“Esperar el tiempo de Dios requiere paciencia, pero sus promesas siempre se cumplen.”</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 16: Noé -->
+        <section class="slide story-slide" id="slide-16" data-theme="dark">
+            <div class="slide-content story-layout">
+                <div class="story-left">
+                    <span class="story-category">OBEDECER A PESAR DE LA ESPERA</span>
+                    <h2 class="story-character">NOÉ</h2>
+                    <div class="scripture-box">
+                        <p class="scripture-text">“E hizo Noé conforme a todo lo que Dios le mandó.”</p>
+                        <span class="scripture-reference">Génesis 6:22</span>
+                    </div>
+                    <div class="doctrinal-summary">
+                        <h3>TRABAJAR CON FE EN LA ESPERA</h3>
+                        <p>Noé construyó una enorme arca en tierra firme durante muchos años bajo el sol, a pesar de que nunca antes había llovido y la gente se burlaba. Él confió en la advertencia de Dios y protegió a su familia.</p>
+                    </div>
+                </div>
+                <div class="story-right">
+                    <!-- Vector Art premium de silueta del arca dorada como fallback -->
+                    <div class="image-wrapper vector-fallback bg-noe">
+                        <div class="svg-vector-container">
+                            <svg viewBox="0 0 100 100" class="gold-vector-svg">
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="url(#goldGradient)" stroke-width="1.5" stroke-dasharray="2,2"/>
+                                <!-- Arca de perfil -->
+                                <path d="M15 55 L85 55 L80 68 L20 68 Z" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+                                <!-- Casa encima del arca -->
+                                <path d="M30 55 L30 45 L70 45 L70 55" fill="none" stroke="url(#goldGradient)" stroke-width="1.5"/>
+                                <!-- Techo -->
+                                <path d="M28 45 L50 35 L72 45 Z" fill="none" stroke="url(#goldGradient)" stroke-width="1.5"/>
+                                <!-- Ventana -->
+                                <rect x="47" y="48" width="6" height="4" fill="none" stroke="url(#goldGradient)" stroke-width="1"/>
+                                <!-- Nube y gotas -->
+                                <path d="M35 25 C35 22, 42 20, 48 22 C52 20, 60 21, 62 25 C66 25, 68 28, 65 31 L32 31 Z" fill="none" stroke="url(#goldGradient)" stroke-width="1"/>
+                                <line x1="38" y1="34" x2="36" y2="38" stroke="url(#goldGradient)" stroke-width="1"/>
+                                <line x1="48" y1="34" x2="46" y2="38" stroke="url(#goldGradient)" stroke-width="1"/>
+                                <line x1="58" y1="34" x2="56" y2="38" stroke="url(#goldGradient)" stroke-width="1"/>
+                            </svg>
+                        </div>
+                        <div class="img-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 17: Transición 8 (TENSIÓN/DESESPERACIÓN) -->
+        <section class="slide transition-slide tension-slide" id="slide-17" data-theme="tension">
+            <div class="slide-content transition-layout">
+                <div class="transition-card">
+                    <span class="section-number red-text">CASO CRÍTICO</span>
+                    <h2 class="transition-title tension-title">Cuando la desesperación desvía la obediencia</h2>
+                    <div class="divider-red-spark"></div>
+                    <p class="doctrinal-phrase red-subtext">“Cuando nos desesperamos y queremos tomar el control, terminamos desobedeciendo a Dios.”</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 18: Saúl (Desobediencia) -->
+        <section class="slide story-slide tension-slide" id="slide-18" data-theme="tension">
+            <div class="slide-content story-layout">
+                <div class="story-left">
+                    <span class="story-category red-text">LA CAÍDA DE LA IMPACIENCIA</span>
+                    <h2 class="story-character tension-character">SAÚL</h2>
+                    <div class="scripture-box tension-box">
+                        <p class="scripture-text">“Locamente has hecho; no guardaste el mandamiento de Jehová tu Dios.”</p>
+                        <span class="scripture-reference">1 Samuel 13:13</span>
+                    </div>
+                    <div class="doctrinal-summary">
+                        <h3>LA DESESPERACIÓN DE LA IMPACIENCIA</h3>
+                        <p>Al ver que el ejército huía y el profeta Samuel no llegaba a tiempo, el rey Saúl se desesperó. En lugar de esperar el tiempo indicado, decidió realizar él mismo el sacrificio, desobedeciendo a Dios por actuar bajo su propio juicio.</p>
+                    </div>
+                </div>
+                <div class="story-right">
+                    <!-- Vector Art premium de corona rota dorada sobre fondo carmesí como fallback -->
+                    <div class="image-wrapper vector-fallback bg-saul">
+                        <div class="svg-vector-container">
+                            <svg viewBox="0 0 100 100" class="red-vector-svg">
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="url(#redGradient)" stroke-width="1.5" stroke-dasharray="2,2"/>
+                                <!-- Corona rota en diagonal -->
+                                <g transform="rotate(-10 50 50)">
+                                    <!-- Base de corona partida -->
+                                    <path d="M22 60 L78 60 L74 42 L61 52 L50 38 L39 52 L26 42 Z" fill="none" stroke="url(#redGradient)" stroke-width="2"/>
+                                    <!-- Grieta de ruptura -->
+                                    <path d="M48 62 L50 50 L48 45 L52 36" fill="none" stroke="#ff4d4d" stroke-width="1.5"/>
+                                </g>
+                                <!-- Altar humeante abajo -->
+                                <path d="M35 78 L65 78 L60 70 L40 70 Z" fill="none" stroke="url(#redGradient)" stroke-width="1.5"/>
+                                <path d="M45 70 Q43 65, 45 62 Q48 65, 47 70" fill="none" stroke="url(#redGradient)" stroke-width="1"/>
+                                <path d="M53 70 Q51 64, 54 60 Q57 64, 55 70" fill="none" stroke="url(#redGradient)" stroke-width="1"/>
+                            </svg>
+                        </div>
+                        <div class="img-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 19: Cierre y Recapitulación -->
+        <section class="slide final-slide" id="slide-19" data-theme="dark">
+            <div class="slide-content final-layout">
+                <div class="final-container">
+                    <h2 class="final-pre-title">CONCLUSIÓN BÍBLICA</h2>
+                    <h1 class="final-verse">“Ciertamente el obedecer es mejor que los sacrificios.”</h1>
+                    <span class="final-verse-reference">— 1 Samuel 15:22</span>
+                    
+                    <div class="divider-gold"></div>
+
+                    <!-- Panel de Recapitulación -->
+                    <div class="recap-grid">
+                        <div class="recap-item">
+                            <span class="recap-name">MOISÉS</span>
+                            <span class="recap-status">Obedeció con miedo.</span>
+                        </div>
+                        <div class="recap-item">
+                            <span class="recap-name">ABRAHAM</span>
+                            <span class="recap-status">Obedeció sin entender.</span>
+                        </div>
+                        <div class="recap-item">
+                            <span class="recap-name">JOB</span>
+                            <span class="recap-status">Obedeció en el dolor.</span>
+                        </div>
+                        <div class="recap-item">
+                            <span class="recap-name">DANIEL</span>
+                            <span class="recap-status">Obedeció bajo presión.</span>
+                        </div>
+                        <div class="recap-item">
+                            <span class="recap-name">PEDRO</span>
+                            <span class="recap-status">Obedeció frustrado.</span>
+                        </div>
+                        <div class="recap-item">
+                            <span class="recap-name">NOÉ</span>
+                            <span class="recap-status">Obedeció durante años.</span>
+                        </div>
+                        <div class="recap-item tension-recap">
+                            <span class="recap-name red-text">SAÚL</span>
+                            <span class="recap-status red-subtext">Desobedeció por desesperación.</span>
+                        </div>
+                    </div>
+
+                    <div class="final-call-to-action">
+                        <h2 class="final-phrase">“La obediencia siempre será mejor que cualquier sacrificio.”</h2>
+                        <button class="btn-restart" onclick="restartPresentation()">
+                            <svg class="restart-icon" viewBox="0 0 24 24"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l.73-2.73" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>REPETIR ESTUDIO</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Elementos Comunes: Gradientes globales para los SVGs en fallback -->
+        <svg style="width:0; height:0; position:absolute;" width="0" height="0">
+            <defs>
+                <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8d7355" />
+                    <stop offset="50%" stop-color="#c5a880" />
+                    <stop offset="100%" stop-color="#dfcbb5" />
+                </linearGradient>
+                <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8a1c1c" />
+                    <stop offset="50%" stop-color="#ff4d4d" />
+                    <stop offset="100%" stop-color="#ffa3a3" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <!-- Controles de Navegación Interiores -->
+        <div class="navigation-controls">
+            <button class="nav-btn prev-btn" id="prevBtn" onclick="prevSlide()" aria-label="Anterior Slide">
+                <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            
+            <button class="nav-btn play-btn" id="playBtn" onclick="toggleAutoplay()" aria-label="Reproducción automática">
+                <!-- Play Icon -->
+                <svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+                <!-- Pause Icon (hidden by default) -->
+                <svg id="pauseIcon" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" fill="currentColor"/></svg>
+            </button>
+
+            <button class="nav-btn fullscreen-btn" id="fullscreenBtn" onclick="toggleFullscreen()" aria-label="Pantalla completa">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                </svg>
+            </button>
+
+            <button class="nav-btn next-btn" id="nextBtn" onclick="nextSlide()" aria-label="Siguiente Slide">
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+        </div>
+
+        <!-- Indicador de Teclado Informativo -->
+        <div class="keyboard-hint">
+            <span>Usa ⟵ o ⟶ en el teclado para navegar</span>
+        </div>
+
+    </div>
+
+    <!-- Script de Lógica -->
+    <script src="app.js"></script>
+</body>
+</html>
